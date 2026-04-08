@@ -32,7 +32,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ── NAV ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
@@ -65,7 +64,6 @@ nav.scrolled {
 }
 .nav-links a:hover { color: var(--accent); }
 
-/* ── HERO ── */
 #hero {
   min-height: 100vh;
   display: grid;
@@ -108,10 +106,7 @@ nav.scrolled {
   margin-bottom: 0.4rem;
   opacity: 0; animation: fadeUp 0.8s 0.35s forwards;
 }
-.hero-name em {
-  font-style: italic;
-  color: var(--accent);
-}
+.hero-name em { font-style: italic; color: var(--accent); }
 .hero-title {
   font-family: 'DM Mono', monospace;
   font-size: 0.85rem;
@@ -161,7 +156,6 @@ nav.scrolled {
 }
 .btn-ghost:hover { color: var(--text); border-color: var(--muted); }
 
-/* hero image side */
 .hero-visual {
   display: flex;
   flex-direction: column;
@@ -187,11 +181,7 @@ nav.scrolled {
   border-radius: 3px;
   filter: grayscale(20%) contrast(1.05);
 }
-.hero-stats {
-  display: flex; gap: 2rem;
-  width: 100%;
-  justify-content: flex-end;
-}
+.hero-stats { display: flex; gap: 2rem; width: 100%; justify-content: flex-end; }
 .stat { text-align: right; }
 .stat-num {
   font-family: 'Cormorant Garamond', serif;
@@ -209,7 +199,6 @@ nav.scrolled {
   text-transform: uppercase;
 }
 
-/* ── SCROLL INDICATOR ── */
 .scroll-hint {
   position: absolute;
   bottom: 2.5rem; left: 50%; transform: translateX(-50%);
@@ -229,7 +218,6 @@ nav.scrolled {
   animation: scrollPulse 2s ease-in-out infinite;
 }
 
-/* ── SECTION BASE ── */
 section { padding: 7rem 3rem; }
 .section-label {
   font-family: 'DM Mono', monospace;
@@ -249,14 +237,8 @@ section { padding: 7rem 3rem; }
 }
 .section-heading em { font-style: italic; }
 
-/* divider */
-.rule {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 0;
-}
+.rule { border: none; border-top: 1px solid var(--border); margin: 0; }
 
-/* ── ABOUT ── */
 #about { background: var(--surface); }
 .about-grid {
   display: grid;
@@ -274,10 +256,7 @@ section { padding: 7rem 3rem; }
   color: rgba(240,236,228,0.82);
 }
 .about-body p + p { margin-top: 1.3rem; }
-.about-pills {
-  display: flex; flex-wrap: wrap; gap: 0.6rem;
-  margin-top: 2.5rem;
-}
+.about-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2.5rem; }
 .pill {
   font-family: 'DM Mono', monospace;
   font-size: 0.65rem;
@@ -289,7 +268,6 @@ section { padding: 7rem 3rem; }
   border-radius: 2px;
 }
 
-/* ── EXPERIENCE ── */
 #experience { max-width: 1100px; margin: 0 auto; }
 .exp-list { display: flex; flex-direction: column; }
 .exp-item {
@@ -298,7 +276,6 @@ section { padding: 7rem 3rem; }
   gap: 3rem;
   padding: 2.5rem 0;
   border-top: 1px solid var(--border);
-  transition: background 0.2s;
 }
 .exp-item:last-child { border-bottom: 1px solid var(--border); }
 .exp-meta { padding-top: 0.2rem; }
@@ -333,12 +310,7 @@ section { padding: 7rem 3rem; }
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
-.exp-bullets {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
+.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
 .exp-bullets li {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.05rem;
@@ -355,14 +327,9 @@ section { padding: 7rem 3rem; }
   font-size: 0.8rem;
 }
 
-/* ── SKILLS ── */
 #skills { background: var(--surface); }
 .skills-inner { max-width: 1100px; margin: 0 auto; }
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
+.skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
 .skill-group h4 {
   font-family: 'DM Mono', monospace;
   font-size: 0.65rem;
@@ -382,7 +349,6 @@ section { padding: 7rem 3rem; }
   color: rgba(240,236,228,0.75);
 }
 
-/* ── PROJECTS ── */
 #projects { max-width: 1100px; margin: 0 auto; }
 .projects-grid {
   display: grid;
@@ -444,7 +410,6 @@ section { padding: 7rem 3rem; }
   text-transform: uppercase;
 }
 
-/* ── EDUCATION ── */
 #education { background: var(--surface); }
 .edu-inner { max-width: 1100px; margin: 0 auto; }
 .edu-list { display: flex; flex-direction: column; gap: 0; }
@@ -484,7 +449,6 @@ section { padding: 7rem 3rem; }
   white-space: nowrap;
 }
 
-/* ── CONTACT ── */
 #contact {
   max-width: 1100px; margin: 0 auto;
   display: grid;
@@ -529,48 +493,27 @@ section { padding: 7rem 3rem; }
   background: var(--accent-dim);
   border-color: rgba(201,169,110,0.4);
 }
-form { display: flex; flex-direction: column; gap: 1rem; }
-form input, form textarea {
-  background: var(--surface);
-  border: 1px solid var(--border-strong);
-  border-radius: 2px;
-  color: var(--text);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
-  font-weight: 300;
-  padding: 0.85rem 1rem;
-  outline: none;
-  transition: border-color 0.2s;
-  width: 100%;
-}
-form input:focus, form textarea:focus {
-  border-color: rgba(201,169,110,0.5);
-}
-form textarea { min-height: 130px; resize: vertical; }
-form input::placeholder, form textarea::placeholder {
-  color: var(--muted);
-  font-family: 'DM Mono', monospace;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-}
-form button {
-  align-self: flex-start;
-  background: var(--accent);
-  color: #0a0a0a;
-  border: none;
-  padding: 0.75rem 2rem;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: opacity 0.2s, transform 0.2s;
-}
-form button:hover { opacity: 0.85; transform: translateY(-1px); }
 
-/* ── FOOTER ── */
+/* Email CTA block */
+.email-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  height: 100%;
+  padding-top: 1rem;
+}
+.email-cta p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: rgba(240,236,228,0.65);
+  line-height: 1.8;
+}
+.email-cta a.btn-primary {
+  align-self: flex-start;
+}
+
 footer {
   border-top: 1px solid var(--border);
   padding: 2.5rem 3rem;
@@ -598,7 +541,6 @@ footer {
 }
 .footer-links a:hover { color: var(--accent); }
 
-/* ── ANIMATIONS ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -622,7 +564,6 @@ footer {
   transform: translateY(0);
 }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   #hero { grid-template-columns: 1fr; padding-top: 7rem; }
   .hero-visual { align-items: center; }
@@ -1011,13 +952,9 @@ footer {
         </a>
       </div>
     </div>
-    <div class="reveal">
-      <form method="POST" action="https://formspree.io/f/xnqeygka">
-        <input type="hidden" name="_subject" value="Contact from portfolio">
-        <input type="email" name="_replyto" placeholder="your email">
-        <textarea name="message" placeholder="your message"></textarea>
-        <button type="submit">Send message</button>
-      </form>
+    <div class="email-cta reveal">
+      <p>Prefer a direct line? Drop me an email and I'll get back to you as soon as I can.</p>
+      <a href="mailto:aishutk3@gmail.com" class="btn-primary">Send me an email →</a>
     </div>
   </div>
 </section>
